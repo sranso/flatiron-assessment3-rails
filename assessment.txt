@@ -12,7 +12,7 @@ From any post I should be able to both see all the comments and add a comment my
 Questions to be answered in the assesment.txt file.
 
 How does rails communicate with the database?  Please be thorough in discussing all the config files and pieces of rails necessary to communicate with the database.
-  
+  In database.yml the kind of database and the location of the database file are defined. For example in development for this app, we're using sqlite3 as our database, and the db file is located db/development.sqlite3. In migrations and the models, we define the kind of ORM we're using. So, in this app, we use ActiveRecord which is clarified in migrations (they all inherit from ActiveRecord::Migration) and in models (models inherit from ActiveRecord::Base). The ORM allows the rails application to communicate with the db—create read update and delete records.
 What is a resource?
   A reference to an object in the database.
 What are the standard RESTful routes for a resource?
