@@ -16,25 +16,29 @@ How does rails communicate with the database?  Please be thorough in discussing 
 What is a resource?
   A reference to an object in the database.
 What are the standard RESTful routes for a resource?
-  /posts
-  /posts/:id
-  /posts/edit/:id
-  /posts/create
+  GET /posts # show all posts
+  GET /posts/:id # show one post
+  GET /posts/:id/edit # edit a post
+  PUT /posts/:id # update a post
+  GET /posts/new # new a post
+  POST /posts # create new post
+  DELETE /posts/:id # delete a post
 What is CRUD?
   Create
   Read
   Update
   Delete
+  a route will match to at least one of these operations in the db
 What is REST?
   Representational state transfer. A style for how routes can be made. They should make logical sense. Focuses on the role of components rather than the details.
 What is the difference between CRUD and REST?
-  CRUD is about the things one should be able to do with resources. REST is how the resources should be organized in your application.
+  CRUD is about the things one can do with resources. REST is how the resources should be displayed and organized in your application.
 Describe the flow of a request from a users browser through the rails stack and back.
-  
+  User goes to www.site/posts on their browser. Request is sent to the server, checks to see if that route exists with the HTTP request made. If yes, we move to the controller (location in the routes, 'posts#index'), so in the method 'index' we get the variables we need (e.g. @posts), and head over to the view posts/index.html.erb. This is evaluated into strings/HTML, which is then sent back to the client and rendered on the browser.
 What are HTTP verbs?
-  GET -- request for information on the server
-  POST -- addition of information on the server
-  PUT -- 
-  DELETE -- destroying of information on the server
+  GET -- request for information
+  POST -- create a resource of information
+  PUT -- create or overwrite a resource
+  DELETE -- destroying of information
 Why do we use migrations.
   Migrations allow for us to build up our database tables and keep track of the changes we've made.
