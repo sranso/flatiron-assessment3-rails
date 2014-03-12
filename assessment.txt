@@ -1,0 +1,40 @@
+Rails Assesment
+
+The answers to this assesment should be submitted in the form of a link to a github repo
+The repository should be a rails app with one additional file in the root directory called assesment.txt
+
+Create a blog.
+
+The blog should have the ability to have posts and comments on posts.  There's no need to add a user model.
+
+From any post I should be able to both see all the comments and add a comment myself.
+
+Questions to be answered in the assesment.txt file.
+
+How does rails communicate with the database?  Please be thorough in discussing all the config files and pieces of rails necessary to communicate with the database.
+  
+What is a resource?
+  A reference to an object in the database.
+What are the standard RESTful routes for a resource?
+  /posts
+  /posts/:id
+  /posts/edit/:id
+  /posts/create
+What is CRUD?
+  Create
+  Read
+  Update
+  Delete
+What is REST?
+  Representational state transfer. A style for how routes can be made. They should make logical sense. Focuses on the role of components rather than the details.
+What is the difference between CRUD and REST?
+  CRUD is about the things one should be able to do with resources. REST is how the resources should be organized in your application.
+Describe the flow of a request from a users browser through the rails stack and back.
+  
+What are HTTP verbs?
+  GET -- request for information on the server
+  POST -- addition of information on the server
+  PUT -- 
+  DELETE -- destroying of information on the server
+Why do we use migrations.
+  Migrations allow for us to build up our database tables and keep track of the changes we've made.
